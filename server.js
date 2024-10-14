@@ -91,6 +91,8 @@ wss.on('connection', (ws) => {
     });
 });
 
-server.listen(1611, () => {
-    console.log('Server is listening on port 1611');
+const PORT = process.env.PORT || 1611;
+server.listen(PORT, () => {
+    console.log(`Server is listening on port ${PORT}`);
+});
 });
